@@ -33,10 +33,10 @@ sc_params_property <- "domena.cz"
 sc_row_limit <- 100000
 ```
 
-
+### Pages:
 
 ```R
-## Stažení stránek:
+## Pages download:
 sc_page <- search_analytics(sc_params_property, 
   sc_params_from, 
   sc_params_to, 
@@ -45,8 +45,12 @@ sc_page <- search_analytics(sc_params_property,
   rowLimit = sc_row_limit)
 ```
 
+**Result:**
+
+### Query:
+
 ```R
-## Stažení stránek:
+## Query download:
 sc_page <- search_analytics(sc_params_property, 
   sc_params_from, 
   sc_params_to, 
@@ -55,8 +59,12 @@ sc_page <- search_analytics(sc_params_property,
   rowLimit = sc_row_limit)
 ```
 
+**Result:**
+
+### Page and Query:
+
 ```R
-## Stažení stránek + dotazů:
+## Pagd + Query download:
 sc_pagequery <- search_analytics(sc_params_property, 
   sc_params_from, 
   sc_params_to, 
@@ -64,3 +72,5 @@ sc_pagequery <- search_analytics(sc_params_property,
   searchType = "web", 
   rowLimit = sc_row_limit)
 ```
+
+**Result:**
