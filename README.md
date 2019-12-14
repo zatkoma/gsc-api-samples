@@ -90,7 +90,7 @@ This query provides you information about **pages** and **clicks, impressions, C
 
 ```R
 ## Query download:
-sc_page <- search_analytics(sc_params_property, 
+sc_query <- search_analytics(sc_params_property, 
   sc_params_from, 
   sc_params_to, 
   dimensions = c("query"), 
@@ -98,7 +98,16 @@ sc_page <- search_analytics(sc_params_property,
   rowLimit = sc_row_limit)
 ```
 
+This query provides you information about **users query** and **clicks, impressions, CTR, and average position**. It's useful information about your best keywords and how they are working for you. You could identify queries with bad CTR to improve title/meta descriptions. 
+
 **Result:**
+
+| query | clicks  | impressions  | ctr  | position  |
+|---|:---:|:---:|:---:|:---:|
+| martin žatkovič | 25 | 129 | 0.193798450 | 1.34108 |
+| see think do care | 7 | 611 | 0.011456628 | 12.549918 |
+| digisemestr | 6 | 873 | 0.006872852 | 6.411226 |
+
 
 #### Page and Query:
 
@@ -112,6 +121,12 @@ sc_pagequery <- search_analytics(sc_params_property,
   rowLimit = sc_row_limit)
 ```
 
-This query could be used to identify keyword cannibalization because you want to search one keyword with pages. I've created a script about that which could download from [Keyword Cannibalization R repository](https://github.com/zatkoma/keyword-cannibalization). 
+This query provides you information about **query + page** and **clicks, impressions, CTR, and average position**. This query could be used to identify keyword cannibalization because you want to search one keyword with pages. I've created a script about that which could download from [Keyword Cannibalization R repository](https://github.com/zatkoma/keyword-cannibalization). 
 
 **Result:**
+
+| page | query | clicks  | impressions  | ctr  | position  |
+|---|---|:---:|:---:|:---:|:---:|
+| https://www.zatkovic.cz/ | martin žatkovič | 23 | 129 | 0.178294574 | 1.34108 |
+| https://www.zatkovic.cz/co-je-datova-vrstva/ | datova vrstva | 2 | 11 | 0.181818182 | 1.000000 |
+| https://www.zatkovic.cz/o-mne/ | martin žatkovič | 2 | 127 | 0.015748031 | 1.362205 |
